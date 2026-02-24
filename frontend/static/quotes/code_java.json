@@ -914,7 +914,7 @@
       "length": 633
     },
     {
-     "text": "@WebEndpointTest\nvoid allEvents(WebTestClient client) {\n\tclient.get()\n\t\t.uri((builder) -> builder.path(\"/actuator/auditevents\").build())\n\t\t.exchange()\n\t\t.expectStatus()\n\t\t.isOk()\n\t\t.expectBody()\n\t\t.jsonPath(\"events.[*].principal\")\n\t\t.isEqualTo(new JSONArray().appendElement(\"admin\").appendElement(\"admin\").appendElement(\"user\"));\n}",
+      "text": "@WebEndpointTest\nvoid allEvents(WebTestClient client) {\n\tclient.get()\n\t\t.uri((builder) -> builder.path(\"/actuator/auditevents\").build())\n\t\t.exchange()\n\t\t.expectStatus()\n\t\t.isOk()\n\t\t.expectBody()\n\t\t.jsonPath(\"events.[*].principal\")\n\t\t.isEqualTo(new JSONArray().appendElement(\"admin\").appendElement(\"admin\").appendElement(\"user\"));\n}",
       "source": "Spring Boot - WebTestClient Fluent API",
       "id": 152,
       "length": 347
